@@ -58,3 +58,49 @@ console.log(1 && 2 && 3);//null
 //De forma similar, porém oposta ao OR, o operador AND verifica os operandos da esquerda para a direita e retorna o primeiro valor falso que encontrar, ou o último valor verificado caso todos os operandos sejam verdadeiros.
 
 //O operador AND tem maior precedência que o operador OR. Por exemplo, no código a && b || c && d; os operadores AND funcionam de forma similar a parênteses, dessa forma: (a && b) || (c && d);
+
+console.log(!true);//false
+console.log(!0);//true
+//O operador NOT (!) converte o operando em um valor booleano e retorna o valor inverso.
+
+console.log(!!"exemplo de string");//true
+console.log(!!null);//false
+//Um duplo NOT (!!) pode ser usando para converter um valor para booleano.
+
+console.log(Boolean("exemplo de string"));//true
+console.log(Boolean(null));//false
+//A outra opção para fazer o mesmo é usando a função "Boolean".
+
+//Exercício
+
+//Write the code which asks for a login with prompt.
+
+//If the visitor enters "Admin", then prompt for a password, if the input is an empty line or Esc – show “Canceled”, if it’s another string – then show “I don’t know you”.
+
+//The password is checked as follows:
+
+//    If it equals “TheMaster”, then show “Welcome!”,
+//    Another string – show “Wrong password”,
+//    For an empty string or cancelled input, show “Canceled”
+
+//The schema:
+
+let userName = prompt("Username:", "");
+
+if (userName === "Admin") {
+
+    let passw = prompt("Password:", "");
+    
+    if (passw === "Aglaea") {
+        alert("Welcome!");
+    } else if (passw === "" || passw === null) {
+        alert("Canceled.");
+    } else {
+        alert("Wrong password");
+    }
+
+} else if (userName === "" || userName === null) {
+    alert("Canceled.");
+} else {
+    alert("Incorrect username.");
+}
